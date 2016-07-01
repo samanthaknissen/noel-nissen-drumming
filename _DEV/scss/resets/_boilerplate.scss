@@ -1,0 +1,56 @@
+// HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ WITH EDITS BY @rjalgeo
+
+hr {
+  border: 0;
+  border-top: 1px solid $silver;
+  display: block;
+  height: 1px;
+  margin: 1em 0;
+  padding: 0;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.browserupgrade {
+  background: $silver;
+  color: $black;
+  margin: .2em 0;
+  padding: .2em 0;
+}
+
+// ===============
+// ALL: IE Fixes
+// ===============
+
+.ie7 .title {
+  padding-top: 20px;
+}
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+  position: relative;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
