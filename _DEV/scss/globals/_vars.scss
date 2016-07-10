@@ -1,10 +1,6 @@
 // clrs.cc
 
-$navy:   #001f3f;
-$blue:   #0074d9;
-$aqua:   #7fdbff;
-$teal:   #39cccc;
-$olive:  #3d9970;
+$olive:  #535232;
 $green:  #2ecc40;
 $lime:   #01ff70;
 $yellow: #ffdc00;
@@ -18,11 +14,11 @@ $silver: #ddd;
 $gray:   #aaa;
 $black:  #111;
 
-$fontsize: 16px;
+$fontsize: 1em;
 $lineheight: $fontsize * 1.5;
 
-$copyfont: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$headerfont: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$copyfont: 'Open Sans', sans-serif;
+$headerfont: 'Cormorant Garamond', serif;
 
 $fontcolor: $black;
 

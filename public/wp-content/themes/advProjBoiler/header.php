@@ -11,24 +11,3 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <?php wp_head(); ?>
     </head>
-    <body>
-      <header>
-        <h1><?php bloginfo( "name"); ?> | <?php bloginfo( "description" ); ?></h1>
-        <nav>
-          <ul>
-            <?php wp_nav_menu( array( "menu" => "Main Nav")); ?>
-          </ul>
-        </nav>
-      </header>
-        <?php
-        if ( have_posts() ) {
-            while ( have_posts() ) {
-                the_post();
-                the_title( '<h3>', '</h3>' );
-                the_content();
-            }
-        }
-        wp_footer();
-        ?>
-    </body>
-</html>
