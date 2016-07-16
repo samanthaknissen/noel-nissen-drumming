@@ -3,6 +3,8 @@
         <?php
 
         include(get_template_directory() . '/nav.php');
+        include(get_template_directory() . '/introduction.php');
+
 
         if ( have_posts() ) {
             while ( have_posts() ) {

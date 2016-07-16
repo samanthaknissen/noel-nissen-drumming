@@ -10,9 +10,11 @@
 @import 'core';
 
 @import 'pages/about',
+        'pages/index',
         'pages/work';
 
-@import 'responsive/phablet',
+@import 'responsive/mobile',
+        'responsive/phablet',
         'responsive/tablet',
         'responsive/laptop',
         'responsive/desktop';
