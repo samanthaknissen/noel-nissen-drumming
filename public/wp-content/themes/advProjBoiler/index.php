@@ -1,26 +1,9 @@
-<!doctype html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title><?php echo get_bloginfo('name'); ?></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <?php wp_head(); ?>
-    </head>
+<?php get_header(); ?>
     <body>
-      <header>
-        <h1><?php bloginfo( "name"); ?> | <?php bloginfo( "description" ); ?></h1>
-        <nav>
-          <ul>
-            <?php wp_nav_menu( array( "menu" => "Main Nav")); ?>
-          </ul>
-        </nav>
-      </header>
         <?php
+
+        include(get_template_directory() . '/nav.php');
+
         if ( have_posts() ) {
             while ( have_posts() ) {
                 the_post();

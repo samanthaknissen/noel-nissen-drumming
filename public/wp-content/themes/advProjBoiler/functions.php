@@ -28,6 +28,7 @@
   add_action( 'wp_enqueue_scripts', 'themeCSS' );
   add_action( 'wp_enqueue_scripts', 'themeJS' );
   add_filter( 'wp_title', 'nn_filter_wp_title', 10, 3 );
+
   register_nav_menus();
 
 ?>
