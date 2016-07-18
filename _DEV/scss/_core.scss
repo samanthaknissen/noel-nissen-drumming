@@ -5,3 +5,14 @@ body {
   background-color: $white;
 
 }
+
+// This wouldn't work in the body... should I be applying these styles to another class? it seems random. Plus, I want to just apply styles to certain pages, but couldn't make sense of it since it wasn't working when I was attempting to add styles to body.index
+
+.customize-support {
+  width: 90%;
+  margin: auto;
+  padding: 5%;
+  p {
+
+  }
+}

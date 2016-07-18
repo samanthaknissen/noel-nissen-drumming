@@ -19,6 +19,7 @@
   add_action( 'init', 'create_post_types' );
   function create_post_types() {
     create_introduction_post_type();
+    create_about_post_type();
   }
 
   function create_introduction_post_type() {
@@ -35,7 +36,23 @@
         );
       }
 
-// Adding custom post type to query... do I need this?
+// So do I need to do this for every page I want? Do I then just create the php file, calling this custom post type into it?
+
+  function create_about_post_type() {
+    register_post_type( 'about',
+          array(
+            'labels' => array(
+              'name' => __( 'About' ),
+              'singular_name' => __( 'About' )
+            ),
+            'supports' => array( 'title', 'editor', 'custom-fields', 'thumbnail' ),
+            'public' => true,
+            'has_archive' => true,
+          )
+        );
+      }
+
+// Adding custom post type to query... do I need this? It was in a link you sent me, but my homepage is calling in the custom post type without it.
 
 // add_action( 'pre_get_posts', 'add_my_post_types_to_query' );
 
@@ -45,7 +62,7 @@
 //   return $query;
 // }
 
-// Adding post thumbnails... do I need this?
+// Adding post thumbnails
 
   add_theme_support( 'post-thumbnails' );
 
@@ -69,8 +86,13 @@
   add_action( 'wp_enqueue_scripts', 'themeJS' );
   add_filter( 'wp_title', 'nn_filter_wp_title', 10, 3 );
 
-// Menus
+// Menus... me trying to add a footer menu. Is this all I need to do?
 
-  register_nav_menus();
+  register_nav_menus( array(
+    'main' => 'Main Navigation Menu',
+    'footer_menu' => 'Footer Menu',
+    ) );
+
+
 
 ?>
