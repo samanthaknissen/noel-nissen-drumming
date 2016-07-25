@@ -20,7 +20,10 @@
   function create_post_types() {
     create_introduction_post_type();
     create_about_post_type();
+    create_work_post_type();
   }
+
+// Homepage
 
   function create_introduction_post_type() {
     register_post_type( 'introduction',
@@ -32,25 +35,55 @@
             'supports' => array( 'title', 'editor', 'custom-fields', 'thumbnail' ),
             'public' => true,
             'has_archive' => true,
+            'menu_position' => 5,
           )
         );
       }
 
-// So do I need to do this for every page I want? Do I then just create the php file, calling this custom post type into it?
+// About Page
 
   function create_about_post_type() {
     register_post_type( 'about',
           array(
             'labels' => array(
               'name' => __( 'About' ),
-              'singular_name' => __( 'About' )
             ),
             'supports' => array( 'title', 'editor', 'custom-fields', 'thumbnail' ),
             'public' => true,
             'has_archive' => true,
+            'menu_position' => 5,
           )
         );
       }
+
+// Work pages
+
+function create_work_post_type() {
+  register_post_type( 'work',
+        array(
+          'labels' => array(
+            'name' => __( 'Works' ),
+            'singular_name' => __( 'Work' ),
+            'menu_name'          => __( 'Works' ),
+        		'name_admin_bar'     => __( 'Works' ),
+        		'add_new'            => __( 'Add New', 'work' ),
+        		'add_new_item'       => __( 'Add New Work' ),
+        		'new_item'           => __( 'New Work' ),
+        		'edit_item'          => __( 'Edit Work' ),
+        		'view_item'          => __( 'View Work' ),
+        		'all_items'          => __( 'All Works' ),
+        		'search_items'       => __( 'Search Works' ),
+        		'parent_item_colon'  => __( 'Parent Works:' ),
+        		'not_found'          => __( 'No works found.' ),
+        		'not_found_in_trash' => __( 'No works found in Trash.' )
+          ),
+          'supports' => array( 'title', 'editor', 'custom-fields', 'thumbnail' ),
+          'public' => true,
+          'has_archive' => 'Work',
+          'menu_position' => 5,
+        )
+      );
+    }
 
 // Adding custom post type to query... do I need this? It was in a link you sent me, but my homepage is calling in the custom post type without it.
 
