@@ -4,7 +4,7 @@
 
         include(get_template_directory() . '/nav.php');
 
-
+        echo "test";
 
         wp_footer();
 
