@@ -19,7 +19,6 @@
   add_action( 'init', 'create_post_types' );
   function create_post_types() {
     create_introduction_post_type();
-    create_about_post_type();
     create_work_post_type();
   }
 
@@ -40,21 +39,7 @@
         );
       }
 
-// About Page
 
-  function create_about_post_type() {
-    register_post_type( 'about',
-          array(
-            'labels' => array(
-              'name' => __( 'About' ),
-            ),
-            'supports' => array( 'title', 'editor', 'custom-fields', 'thumbnail' ),
-            'public' => true,
-            'has_archive' => true,
-            'menu_position' => 5,
-          )
-        );
-      }
 
 // Work pages
 
@@ -85,19 +70,18 @@ function create_work_post_type() {
       );
     }
 
-// Adding custom post type to query... do I need this? It was in a link you sent me, but my homepage is calling in the custom post type without it.
 
-// add_action( 'pre_get_posts', 'add_my_post_types_to_query' );
 
-// function add_my_post_types_to_query( $query ) {
-//   if ( is_home() && $query->is_main_query() )
-//     $query->set( 'post_type', array( 'introduction' ) );
-//   return $query;
-// }
-
-// Adding post thumbnails
+// Adding post thumbnails, removing inline styles
 
   add_theme_support( 'post-thumbnails' );
+
+  add_filter( 'post_thumbnail_html', 'remove_width_attribute', 10 );
+
+  function remove_width_attribute( $html ) {
+  $html = preg_replace( '/(width|height)="\d*"\s/', "", $html );
+  return $html;
+}
 
 
 // Code from book, not sure if I need to keep
@@ -126,6 +110,14 @@ function create_work_post_type() {
     'footer_menu' => 'Footer Menu',
     ) );
 
-
+    //Page Slug Body Class
+    function add_slug_body_class( $classes ) {
+    global $post;
+    if ( isset( $post ) ) {
+    $classes[] = $post->post_name;
+    }
+    return $classes;
+    }
+    add_filter( 'body_class', 'add_slug_body_class' );
 
 ?>
