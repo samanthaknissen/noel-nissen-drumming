@@ -1,0 +1,33 @@
+.footer-menu {
+  padding: 0;
+  margin-top: 7em;
+  list-style-type: none;
+  text-align: center;
+  border-top-style: solid;
+  border-top-width: thin;
+
+  li {
+    display: inline;
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+      margin-bottom: 10px;
+      padding: 10px;
+      text-align: center;
+      text-decoration: none;
+      color: $olive;
+      display: inline-block;
+  }
+
+  a:hover {
+    color: $black;
+  }
+}
+
+// can't find where the style is giving the menu element 40px of padding left. this is overriding that style.
+
+.menu {
+  padding-left: 0;
+}

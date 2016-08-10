@@ -1,4 +1,30 @@
 body.about {
- 
+  /* ==========================================================================
+     Media Queries
+     ========================================================================== */
+
+  @media only screen and (min-width: 0px) {
+    img {
+      width: 100%;
+      margin-top: 3em;
+    }
+}
+
+
+@media only screen and (min-width: 768px) {
+  img {
+    margin-top: 0em;
+  }
+  p, li {
+    font-size: 1.25em;
+    line-height: $lineheight;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+
+
+
+}
 
 }

@@ -1,0 +1,22 @@
+@media only screen and (min-width: 0px) {
+    .logo {
+      span {
+        display: block;
+        position: relative;
+        top: 15px;
+        letter-spacing: 2px;
+        color: $olive;
+      }
+    }
+}
+
+
+@media only screen and (min-width: 768px) {
+
+}
+
+@media only screen and (min-width: 960px) {
+  .logo {
+    font-size: 3em;
+  }
+}

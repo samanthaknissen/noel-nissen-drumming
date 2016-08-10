@@ -6,15 +6,7 @@ body.home {
   @media only screen and (min-width: 0px) {
     img {
       width: 100%;
-    }
-    .logo {
-      span {
-        display: block;
-        position: relative;
-        top: 15px;
-        letter-spacing: 2px;
-        color: $olive;
-      }
+      margin-top: 3em;
     }
     p {
       font-size: 2em;
@@ -23,18 +15,24 @@ body.home {
     }
 }
 
+
 @media only screen and (min-width: 768px) {
+  img {
+    margin-top: 0em;
+  }
   p {
     font-size: 3.25em;
     line-height: $lineheight;
     font-family: $headerfont;
   }
-nav {
-    float: right;
-    a {
-      font-size: 1.5em;
-    }
+}
+
+@media only screen and (min-width: 960px) {
+  p {
+    font-size: 3.65em;
   }
 
+
 }
+
 }

@@ -9,6 +9,10 @@
 
 @import 'core';
 
+@import 'modules/footer',
+        'modules/logo',
+        'modules/main-nav';
+
 @import 'pages/about',
         'pages/home',
         'pages/work';

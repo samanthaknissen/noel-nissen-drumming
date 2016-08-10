@@ -11,6 +11,13 @@ html {
 
     address,
     blockquote,
+    a {
+      color: $olive;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
     center,
     dir,
     div,
@@ -23,8 +30,15 @@ html {
     h2 {
       font-family: $copyfont;
     }
-    h3,
-    h4,
+    h3 {
+      font-family: $headerfont;
+      font-size: 2.8em;
+    }
+    h4 {
+      font-family: $copyfont;
+      color: $olive;
+      font-size: 1.5em;
+    }
     h5,
     h6,
     isindex,
@@ -33,6 +47,9 @@ html {
     noscript,
     ol,
     p {
+      font-family: $copyfont;
+    }
+    li {
       font-family: $copyfont;
     }
     pre,

@@ -5,40 +5,11 @@ body {
 
 }
 
-// Should I apply these styles somewhere else? I want everything except the footer to be 90%. But I can't figure out how to style the footer to be full-width.
+
+
 
 html body {
   width: 90%;
   margin: 0 auto;
   padding: 5%;
-}
-
-header h1 {
-  display: none;
-}
-
-nav ul {
-      padding: 0;
-      list-style-type: none;
-      text-align: center;
-      float: left;
-
-      li {
-        display: inline-block;
-        padding: 0 15px;
-      }
-
-      a {
-          margin-bottom: 10px;
-          text-align: center;
-          text-decoration: none;
-          color: $black;
-      }
-      a:hover {
-        color: $olive;
-      }
-}
-
-#footer-menu {
-  background-color: $gray;
 }
