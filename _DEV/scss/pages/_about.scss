@@ -5,7 +5,6 @@ body.about {
 
   @media only screen and (min-width: 0px) {
     img {
-      width: 100%;
       margin-top: 3em;
     }
 }
@@ -15,7 +14,7 @@ body.about {
   img {
     margin-top: 0em;
   }
-  p, li {
+  p {
     font-size: 1.25em;
     line-height: $lineheight;
   }

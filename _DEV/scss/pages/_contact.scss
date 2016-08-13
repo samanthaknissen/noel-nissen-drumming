@@ -1,4 +1,4 @@
-body.work {
+body.contact {
 
   /* ==========================================================================
      Media Queries
@@ -6,29 +6,22 @@ body.work {
 
   @media only screen and (min-width: 0px) {
 
-    p {
-      font-size: 1em;
-    }
-
 }
 
 
 @media only screen and (min-width: 768px) {
-  p {
-    font-size: 1em;
-    line-height: $lineheight;
+
+  .contact-wrapper {
+    clear: left;
+    h3 {
+      margin-top: 5em;
+    }
   }
 
-  h3 {
-      margin-top: 5em;
-      clear: left;
-    }
+
 }
 
 @media only screen and (min-width: 960px) {
-
-
-
 
 
 

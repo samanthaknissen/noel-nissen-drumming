@@ -6,11 +6,11 @@
 
         if ( have_posts() ) {
             while ( have_posts() ) {
+              echo '<div class="contact-wrapper">';
                 the_post();
-                the_post_thumbnail();
-                echo '<div class="caption">' . get_post(get_post_thumbnail_id())->post_excerpt . '</div>';
                 the_title( '<h3>', '</h3>' );
                 the_content();
+              echo '</div">';
             }
         }
 

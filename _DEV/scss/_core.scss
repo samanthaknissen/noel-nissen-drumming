@@ -11,28 +11,46 @@ html body {
   padding: 5%;
 }
 
-header h1 {
-  display: none;
+img {
+  width: 100%;
 }
 
-nav ul {
-      padding: 0;
-      list-style-type: none;
-      text-align: center;
-      float: left;
 
-      li {
-        display: inline-block;
-        padding: 0 15px;
-      }
+  /* ==========================================================================
+     Media Queries for .work-teaser, which pulls in work samples onto the homepage and work main page
+     ========================================================================== */
 
-      a {
-          margin-bottom: 10px;
-          text-align: center;
-          text-decoration: none;
-          color: $black;
-      }
-      a:hover {
-        color: $olive;
-      }
+  @media only screen and (min-width: 0px) {
+    .work-teaser {
+      width: 100%;
+      padding-top: 2em;
+    }
+    p {
+      font-size: 1em;
+    }
+
+}
+
+
+@media only screen and (min-width: 768px) {
+  p {
+    font-size: 1em;
+    line-height: $lineheight;
+  }
+
+}
+
+@media only screen and (min-width: 960px) {
+
+  .work-wrapper {
+    clear: left;
+  }
+
+  .work-teaser {
+    width: 45%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+    float: left;
+  }
+
 }

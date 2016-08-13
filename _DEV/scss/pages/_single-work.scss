@@ -1,4 +1,4 @@
-body.home {
+body.single-work {
   /* ==========================================================================
      Media Queries
      ========================================================================== */
@@ -6,16 +6,6 @@ body.home {
   @media only screen and (min-width: 0px) {
     img {
       margin-top: 3em;
-    }
-    .entry-content p {
-      font-size: 2em;
-      line-height: $lineheight;
-      font-family: $headerfont;
-    }
-    .subhead {
-      position: relative;
-      top: 1em;
-      color: $olive;
     }
 
 }
@@ -25,17 +15,14 @@ body.home {
   img {
     margin-top: 0em;
   }
-  .entry-content p {
-    font-size: 3.25em;
+  p {
+    font-size: 1.25em;
     line-height: $lineheight;
-    font-family: $headerfont;
   }
 }
 
 @media only screen and (min-width: 960px) {
-  .entry-content p {
-    font-size: 3.65em;
-  }
+
 
 
 }

@@ -120,4 +120,5 @@ function create_work_post_type() {
     }
     add_filter( 'body_class', 'add_slug_body_class' );
 
+
 ?>
